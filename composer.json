@@ -1,0 +1,41 @@
+{
+    "name": "jonnitto/prettyembedvideostreaming",
+    "type": "neos-plugin",
+    "license": "GPL-3.0-or-later",
+    "description": "Prettier embeds for your native streaming videos in Neos CMS - with nice options like high-res preview images, lightbox feature, captions and advanced customization of embed options.",
+    "keywords": [
+        "flow",
+        "neos",
+        "video",
+        "streaming",
+        "contentelement"
+    ],
+    "support": {
+        "issues": "https://github.com/jonnitto/Jonnitto.PrettyEmbedVideoStreaming/issues",
+        "source": "https://github.com/jonnitto/Jonnitto.PrettyEmbedVideoStreaming"
+    },
+    "homepage": "https://github.com/jonnitto/Jonnitto.PrettyEmbedVideoStreaming",
+    "authors": [
+        {
+            "name": "Jon Uhlmann",
+            "email": "me@jonnitto.ch",
+            "homepage": "https://twitter.com/jonnitto",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "jonnitto/prettyembedhelper": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jonnitto\\PrettyEmbedVideoStreaming\\": "Classes"
+        }
+    },
+    "extra": {
+        "marketplace-account": "me@jonnitto.ch",
+        "installer-name": "Jonnitto.PrettyEmbedVideoStreaming",
+        "neos": {
+            "package-key": "Jonnitto.PrettyEmbedVideoStreaming"
+        }
+    }
+}
