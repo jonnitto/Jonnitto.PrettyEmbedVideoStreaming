@@ -21,24 +21,24 @@ The `--no-update` command prevent the automatic update of the dependencies. Afte
 If you want to customize the default settings, take a look at the [Settings.Jonnitto.yaml] file. If no node property is giving, these default values will be taken. If you, for example, don't want to let the editor choose if the video should open in a lightbox, you can deactivate the mixin in your Configuration folder like this:
 
 ```yaml
-"Jonnitto.PrettyEmbedVideoStreaming:Content.Video":
+'Jonnitto.PrettyEmbedVideoStreaming:Content.Video':
   superTypes:
-    "Jonnitto.PrettyEmbedHelper:Mixin.Lightbox": false
+    'Jonnitto.PrettyEmbedHelper:Mixin.Lightbox': false
 ```
 
-These are the available mixins used for the video:
+These are the available mixins (Prefixed with `Jonnitto.PrettyEmbedHelper:Mixin.`) used for the video stream:
 
-| Mixin name (Prefix: `Jonnitto.PrettyEmbedHelper:`) | Description                                                                                                      | Default value | Enabled per default |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | :-----------: | :-----------------: |
-| `Mixin.Groups`                                     | Enables the inspector groups                                                                                     |               |          ✓          |
-| `Mixin.IncludeAssets`                              | Include the frontend resources                                                                                   |               |          ✓          |
-| `Mixin.Image`                                      | Add the preview image property                                                                                   |               |          ✓          |
-| `Mixin.Lightbox`                                   | Open the video in a lightbox                                                                                     |    `false`    |          ✓          |
-| `Mixin.Title`                                      | Set the title to identify the video in the content tree easily, and pass the title as `aria-label` to the video. |               |          ✓          |
-| `Mixin.Loop`                                       | Loop the video                                                                                                   |    `false`    |                     |
-| `Mixin.Controls`                                   | Show the controls                                                                                                |    `true`     |                     |
-| `Mixin.Autoplay`                                   | Autoplays the video                                                                                              |    `false`    |                     |
-| `Mixin.Muted`                                      | Mutes the video                                                                                                  |    `false`    |                     |
+| Mixin name      | Description                                                                                                      | Default value | Enabled per default |
+| --------------- | ---------------------------------------------------------------------------------------------------------------- | :-----------: | :-----------------: |
+| `Groups`        | Enables the inspector groups                                                                                     |               |          ✓          |
+| `IncludeAssets` | Include the frontend resources                                                                                   |               |          ✓          |
+| `Image`         | Add the preview image property                                                                                   |               |          ✓          |
+| `Lightbox`      | Open the video in a lightbox                                                                                     |    `false`    |          ✓          |
+| `Title`         | Set the title to identify the video in the content tree easily, and pass the title as `aria-label` to the video. |               |          ✓          |
+| `Loop`          | Loop the video                                                                                                   |    `false`    |                     |
+| `Controls`      | Show the controls                                                                                                |    `true`     |                     |
+| `Autoplay`      | Autoplays the video                                                                                              |    `false`    |                     |
+| `Muted`         | Mutes the video                                                                                                  |    `false`    |                     |
 
 ### Fusion
 
