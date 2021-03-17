@@ -47,7 +47,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Component.Video) < prototype(Neos.F
                 crossorigin={props.crossorigin}
                 width={props.width}
                 height={props.height}
-            />
+            ></video>
             {props.setAutoplay ? '' : props.playButton}
             {props.controls || props.setAutoplay ? '' : props.pauseButton}
             <Neos.Fusion:Augmenter class='jonnitto-prettyembed__preview' @if.set={props.ownPreview || props.poster}>
