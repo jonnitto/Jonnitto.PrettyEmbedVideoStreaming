@@ -18,13 +18,13 @@
     "authors": [
         {
             "name": "Jon Uhlmann",
-            "email": "me@jonnitto.ch",
-            "homepage": "https://twitter.com/jonnitto",
+            "email": "hello@uhlmann.pro",
+            "homepage": "https://www.uhlmann.pro",
             "role": "Developer"
         }
     ],
     "require": {
-        "jonnitto/prettyembedhelper": "^2.7"
+        "jonnitto/prettyembedhelper": "^2.7 || ^3.0"
     },
     "autoload": {
         "psr-4": {
