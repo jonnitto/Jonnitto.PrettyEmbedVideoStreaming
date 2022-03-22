@@ -4,6 +4,11 @@
 
 Prettier embeds for your native streaming videos in [Neos CMS] - with excellent options like high-res preview images, lightbox feature, captions, and advanced customization of embed options.
 
+| Version | Neos        | Maintained |
+| ------- | ----------- | :--------: |
+| 1.\*    | 4.2.\*, > 5 |      ✓     |
+| 2.\*    | > 5.\3      |      ✓     |
+
 ## Installation
 
 Most of the time, you have to make small adjustments to a package (e.g., a configuration in `Settings.yaml`). Thus, it is essential to add the corresponding package to the composer from your theme package. Mostly this is the site package located under `Packages/Sites/`. To install it correctly, go to your theme package (e.g.`Packages/Sites/Foo.Bar`) and run the following command:
@@ -31,7 +36,6 @@ These are the available mixins (Prefixed with `Jonnitto.PrettyEmbedHelper:Mixin.
 | Mixin name      | Description                                                                                                      | Default value | Enabled per default |
 | --------------- | ---------------------------------------------------------------------------------------------------------------- | :-----------: | :-----------------: |
 | `Groups`        | Enables the inspector groups                                                                                     |               |          ✓          |
-| `IncludeAssets` | Include the frontend resources                                                                                   |               |          ✓          |
 | `Image`         | Add the preview image property                                                                                   |               |          ✓          |
 | `Lightbox`      | Open the video in a lightbox                                                                                     |    `false`    |          ✓          |
 | `Title`         | Set the title to identify the video in the content tree easily, and pass the title as `aria-label` to the video. |               |          ✓          |
