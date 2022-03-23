@@ -4,10 +4,10 @@
 
 Prettier embeds for your native streaming videos in [Neos CMS] - with excellent options like high-res preview images, lightbox feature, captions, and advanced customization of embed options.
 
-| Version | Neos        | Maintained |
-| ------- | ----------- | :--------: |
-| 1.\*    | 4.2.\*, > 5 |      ✓     |
-| 2.\*    | > 5.\3      |      ✓     |
+| Version | Neos         | Maintained |
+| ------- | ------------ | :--------: |
+| 1.\*    | 4.2.\*, >= 5 |      ✓     |
+| 2.\*    | >= 5.3       |      ✓     |
 
 ## Installation
 
