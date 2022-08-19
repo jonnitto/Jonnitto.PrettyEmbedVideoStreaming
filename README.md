@@ -14,7 +14,7 @@ Prettier embeds for your native streaming videos in [Neos CMS] - with excellent 
 Most of the time, you have to make small adjustments to a package (e.g., a configuration in `Settings.yaml`). Thus, it is essential to add the corresponding package to the composer from your theme package. Mostly this is the site package located under `Packages/Sites/`. To install it correctly, go to your theme package (e.g.`Packages/Sites/Foo.Bar`) and run the following command:
 
 ```bash
-composer require jonnitto/prettyembedvideostreamingstreaming --no-update
+composer require jonnitto/prettyembedvideostreaming --no-update
 ```
 
 The `--no-update` command prevent the automatic update of the dependencies. After the package was added to your theme `composer.json`, go back to the Neos installation's root and run `composer update`. Et voilà! Your desired package is now installed correctly.
