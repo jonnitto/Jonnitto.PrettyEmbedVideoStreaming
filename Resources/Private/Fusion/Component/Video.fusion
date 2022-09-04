@@ -12,20 +12,20 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Component.Video) < prototype(Neos.F
 
     wrapper = ${Configuration.setting('Jonnitto.PrettyEmbedHelper.wrapper')}
 
-    width = null
-    height = null
+    width = ${null}
+    height = ${null}
 
-    id = null
+    id = ${null}
 
-    poster = null
-    alternativeText = null
-    title = null
-    streaming = null
+    poster = ${null}
+    alternativeText = ${null}
+    title = ${null}
+    streaming = ${null}
 
     playButton = Jonnitto.PrettyEmbedHelper:Button.Play
     pauseButton = Jonnitto.PrettyEmbedHelper:Button.Pause
 
-    ownPreview = null
+    ownPreview = ${null}
 
     // Internal
     type = ${this.lightbox ? 'lightbox' : 'inline'}
