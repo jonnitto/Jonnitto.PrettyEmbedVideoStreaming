@@ -99,11 +99,11 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
         renderer = Neos.Fusion:Case {
             noVideoAndPoster {
                 condition = ${!props.streaming && !props.poster}
-                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noVideoStreamAndPoster' default='You need to define a video stream URL and a preview image.' />`
+                renderer = afx`<Jonnitto.PrettyEmbed:Notification key='noVideoStreamAndPoster' default='You need to define a video stream URL and a preview image.' />`
             }
             noVideo {
                 condition = ${!props.streaming}
-                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noVideoStream' default='You need to define a video stream URL.' />`
+                renderer = afx`<Jonnitto.PrettyEmbed:Notification key='noVideoStream' default='You need to define a video stream URL.' />`
             }
             noPoster {
                 condition = ${!props.poster}
