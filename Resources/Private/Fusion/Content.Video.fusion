@@ -4,6 +4,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
         label = ${PropTypes.string}
         id = ${PropTypes.string}
         async = ${PropTypes.boolean}
+        debug = ${PropTypes.boolean}
         class = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
         maximumWidth = ${PropTypes.integer}
         wrapper = ${PropTypes.anyOf(PropTypes.string, PropTypes.boolean)}
@@ -97,6 +98,10 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
         }
 
         renderer = Neos.Fusion:Case {
+            @process.debug = Neos.Fusion:Debug.Console {
+                @if.debug = ${props.debug}
+                props = ${props}
+            }
             noVideoAndPoster {
                 condition = ${!props.streaming && !props.poster}
                 renderer = afx`<Jonnitto.PrettyEmbed:Notification key='noVideoStreamAndPoster' default='You need to define a video stream URL and a preview image.' />`
