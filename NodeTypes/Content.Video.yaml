@@ -11,7 +11,6 @@
     # 'Jonnitto.PrettyEmbedHelper:Mixin.Controls': true
     # 'Jonnitto.PrettyEmbedHelper:Mixin.Autoplay': true
     # 'Jonnitto.PrettyEmbedHelper:Mixin.Muted': true
-    # 'Jonnitto.PrettyEmbedHelper:Mixin.Loop': true
   ui:
     label: i18n
     icon: 'fas fa-film'
