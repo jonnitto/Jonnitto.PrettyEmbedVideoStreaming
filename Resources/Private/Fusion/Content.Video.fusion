@@ -70,18 +70,31 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
         property = 'crossorigin'
     }
 
-    width = ${null}
-    height = ${null}
+    // Internal
+    _posterThumbnail = ${Jonnitto.PrettyEmbedHelper.createThumbnail(this.image, this.maximumWidth)}
+    _posterThumbnail.@if.hasImage = ${this.image}
 
     renderer = Neos.Fusion:Component {
         @apply {
             props = ${props}
             overwrite = Neos.Fusion:DataStructure {
-                poster = Neos.Neos:ImageUri {
-                    @if.set = ${props.image}
-                    asset = ${props.image}
-                    async = ${props.async}
-                    maximumWidth = ${props.maximumWidth}
+                posterWidth = ${props._posterThumbnail ? props._posterThumbnail.width : null}
+                posterHeight = ${props._posterThumbnail ? props._posterThumbnail.height : null}
+                poster = Neos.Fusion:Case {
+                    hasThumbnail {
+                        condition = ${props._posterThumbnail}
+                        renderer = Neos.Fusion:ResourceUri {
+                            resource = ${props._posterThumbnail.resource}
+                        }
+                    }
+                    hasPersistentResource {
+                        condition = ${props.image}
+                        renderer = Neos.Neos:ImageUri {
+                            asset = ${props.image}
+                            async = ${props.async}
+                            maximumWidth = ${props.maximumWidth}
+                        }
+                    }
                 }
                 poster2x = Neos.Neos:ImageUri {
                     @if {
@@ -126,6 +139,8 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
                         poster={props.poster}
                         poster2x={props.poster2x}
                         posterSrcset={props.posterSrcset}
+                        posterWidth={props.posterWidth}
+                        posterHeight={props.posterHeight}
                         loadImageStrategy={props.loadImageStrategy}
                         preload={props.preload}
                         crossorigin={props.crossorigin}
