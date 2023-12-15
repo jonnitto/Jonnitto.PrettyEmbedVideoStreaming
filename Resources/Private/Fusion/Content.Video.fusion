@@ -9,6 +9,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
         maximumWidth = ${PropTypes.integer}
         wrapper = ${PropTypes.anyOf(PropTypes.string, PropTypes.boolean)}
         loadImageStrategy = ${PropTypes.oneOf(['lazy', 'eager', null, false])}
+        imageformat = ${PropTypes.oneOf(['jpg', 'jpeg', 'gif', 'png', 'wbmp', 'xbm', 'webp', 'bmp'])}
         streaming = ${PropTypes.string}
         width = ${PropTypes.integer}
         height = ${PropTypes.integer}
@@ -71,7 +72,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
     }
 
     // Internal
-    _posterThumbnail = ${Jonnitto.PrettyEmbedHelper.createThumbnail(this.image, this.maximumWidth)}
+    _posterThumbnail = ${Jonnitto.PrettyEmbedHelper.createThumbnail(this.image, this.maximumWidth, this.imageformat)}
     _posterThumbnail.@if.hasImage = ${this.image}
 
     renderer = Neos.Fusion:Component {
@@ -92,6 +93,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
                         renderer = Neos.Neos:ImageUri {
                             asset = ${props.image}
                             async = ${props.async}
+                            format = ${props.imageformat}
                             maximumWidth = ${props.maximumWidth}
                         }
                     }
@@ -105,6 +107,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
                     }
                     asset = ${props.image}
                     async = ${props.async}
+                    format = ${props.imageformat}
                     maximumWidth = ${props.maximumWidth * 2}
                 }
             }
