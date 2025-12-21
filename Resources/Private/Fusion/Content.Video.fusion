@@ -132,6 +132,7 @@ prototype(Jonnitto.PrettyEmbedVideoStreaming:Content.Video) < prototype(Jonnitto
                 renderer = afx`<Jonnitto.PrettyEmbed:Notification key='needPreviewImage' default='You need to define a preview image.' />`
             }
             default {
+                @position = 'end'
                 condition = true
                 renderer = afx`
                     <Jonnitto.PrettyEmbed:Presentation.Video
